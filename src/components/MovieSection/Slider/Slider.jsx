@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -20,14 +20,14 @@ const SimpleSlider = () =>{
     return (
         <StyledSlider>
        
-        <Slider {...settings}>
-            {Users.map((user, i)=>(
-                <div className='card'>
-                    <Image src={user.image} />
-                    <h2>{user.nom}</h2>
-                </div>
-            ))}
-        </Slider>
+            <Slider {...settings}>
+                {Users.map((user, i)=>(
+                    <div className='card'>
+                        <Image src={user.image} />
+                        <h2>{user.nom}</h2>
+                    </div>
+                ))}
+            </Slider>
         </StyledSlider>
     )
 }

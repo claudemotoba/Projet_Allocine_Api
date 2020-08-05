@@ -6,10 +6,8 @@ const Wrapper = ({ children }) => {
     return(
         <div>
             <div>
-            <Menu />
+                <Menu />
             </div>
-            <br />
-            <br />
             <br />
             <div>{children}</div>
             <Footer/>

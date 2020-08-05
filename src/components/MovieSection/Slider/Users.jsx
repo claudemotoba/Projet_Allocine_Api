@@ -40,6 +40,13 @@ const Users = [
         prenom: 'claude',
         sexe: 'masculin',
         image: 'https://occ-0-300-299.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeDyYguyRPqiONrCAsZRrrEK52jApnv5eXKes28q7dGwc3RiQJ_T_OBHnu9dh3JqFT8V1qbwUUROnTTsUmLp9lW_40A.jpg?r=93b'
+    }
+    ,
+      {
+        nom: 'Fast and Furious 7',
+        prenom: 'kevine',
+        sexe: 'masculin',
+        image: 'https://occ-0-300-299.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWvFGKpE_4_h9issqFjcxnKoOs8G0xDnaJOUvib-s80UK9XQ-BCL_FmYJ7U3IBWU6LH5Z5xuE7hUySn3KlbkFbJrshg.jpg?r=8f5'
     },
 ]
 
