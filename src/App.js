@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Accueil from './pages/Home/Home';
 import Movie from './pages/Movie/Movie'
+import Details from './pages/Details/Details'
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Movie/>
         </Route>
         <Route path="/about-us">
-          
+          <Details/>
         </Route>
         <Route path="/contact">
           

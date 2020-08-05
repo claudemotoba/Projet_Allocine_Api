@@ -31,6 +31,7 @@ export default class MenuExampleSecondary extends Component {
         <Menu.Item
           style={{color:'#ffffff'}}
           name='ABOUT  US'
+          href='/about-us'
           active={activeItem === 'ABOUT  US'}
           onClick={this.handleItemClick}
         />
