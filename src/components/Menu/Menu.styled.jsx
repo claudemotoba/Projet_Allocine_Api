@@ -6,12 +6,13 @@ const StyledMenu = styled.div`
   color: white;
   height: 80px;
   width: 70%;
-  margin-left: 10%;
-  padding-left: 20%;
+  margin-left: 20%;
+  padding-left: 13%;
   padding-top: 20px;
 
   input{
-    height: 30px
+    height: 30px;
+    padding-left: 5%;
   }
   a{
      font-size: 16px;

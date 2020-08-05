@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
     background-color: #CD0F0F;
     height: 80px;
     padding: 20px;
-    position:absolute;
+    position: absolute;
     bottom:0;
     width:100%;
 
