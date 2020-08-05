@@ -24,7 +24,7 @@ const SimpleSlider = () =>{
             {Users.map((user, i)=>(
                 <div className='card'>
                     <Image src={user.image} />
-                    <h2>{user.prenom}</h2>
+                    <h2>{user.nom}</h2>
                 </div>
             ))}
         </Slider>
