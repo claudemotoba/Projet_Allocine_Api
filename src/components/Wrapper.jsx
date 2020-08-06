@@ -2,11 +2,11 @@ import React from 'react'
 import Menu from './Menu/Menu'
 import Footer from './Footer/Footer'
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ children, searchFucntion }) => {
     return(
         <div>
             <div>
-                <Menu />
+                <Menu searchFucntion={searchFucntion}/>
             </div>
             <br />
             <div>{children}</div>

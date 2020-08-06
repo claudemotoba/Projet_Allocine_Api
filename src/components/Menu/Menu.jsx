@@ -3,13 +3,7 @@ import { Input, Menu } from 'semantic-ui-react'
 import StyledMenu from './Menu.styled'
 
 
-export default class MenuExampleSecondary extends Component {
-  state = { activeItem: 'home' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  render() {
-    const { activeItem } = this.state
+const Header = ({ searchFucntion }) => {
 
     return (
       <StyledMenu>
@@ -18,36 +12,37 @@ export default class MenuExampleSecondary extends Component {
           style={{color:'#ffffff'}}
           name='HOME'
           href='/'
-          active={activeItem === 'HOME'}
-          onClick={this.handleItemClick}
+          // active={activeItem === 'HOME'}
+          // onClick={this.handleItemClick}
         />
         <Menu.Item
           style={{color:'#ffffff'}}
           name='MOVIES'
           href='/movies'
-          active={activeItem === 'MOVIES'}
-          onClick={this.handleItemClick}
+          // active={activeItem === 'MOVIES'}
+          // onClick={this.handleItemClick}
         />
         <Menu.Item
           style={{color:'#ffffff'}}
           name='ABOUT  US'
           href='/about-us'
-          active={activeItem === 'ABOUT  US'}
-          onClick={this.handleItemClick}
+          // active={activeItem === 'ABOUT  US'}
+          // onClick={this.handleItemClick}
         />
         <Menu.Item
             style={{color:'#ffffff'}}
             name='CONTACT'
-            active={activeItem === 'CONTACT'}
-            onClick={this.handleItemClick}
+            // active={activeItem === 'CONTACT'}
+            // onClick={this.handleItemClick}
         />
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
+            <input icon='search' placeholder='Search...' onChange={searchFucntion}/>
           </Menu.Item>
         </Menu.Menu>
       </Menu>
       </StyledMenu>
     )
-  }
 }
+
+export default  Header;
