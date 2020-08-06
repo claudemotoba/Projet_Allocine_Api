@@ -4,7 +4,7 @@ const StyledMovie = styled.div`
 
   display: flex;
   width: calc(23.25%*4);
-  margin-left: 3.5%;
+  margin-left: 4%;
   flex-wrap: wrap;
   .film{
     max-width: 290px;

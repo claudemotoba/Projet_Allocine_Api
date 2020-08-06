@@ -18,40 +18,39 @@ const Movie = () => {
     const api_key = '1ea7ac90e55beb953ffcdb03733ccf92'
 
     const [movies, setMovies] = useState([]);
-    const [search, setSearch] = useState([]);
 
     useEffect(() => {
         (async ()=>{
-            const movie = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}`)
-            console.log(movie.data);
+            const movie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=3`)
+            // console.log(movie.data.results);
+            setMovies(movie.data.results)
 
-
-
-            console.log(movie);
-            
-            
-            setMovies(movie.data)
    
            })();
     },[])
 
-    const filterUser = Users.filter(user => {
-        return user.nom.includes(search)
-    })
+
+    // const filterUser = searchMovies.filter(user => {
+    //     return user.title.includes(search)
+    // })
 
     const detailsMovie = (id) =>{
+        const filterMovie = movies.filter(movie => movie.id == id)
 
+        const newCurrentMovie = filterMovie.length > 0 ? filterMovie[0] : null
+
+        //setMovies({ currentMovies: filterMovie })
     }
     
 
     return(
-            <Wrapper searchFucntion={ e => setSearch(e.target.value.toLowerCase())} >
+            <Wrapper>
             <Titre>Movies</Titre>
                 <StyledMovie>
-                    {filterUser.map((movie, i)=>(
-                        <Link className='film' key={i} to={detailsMovie}>
-                            <Image src={movie.image} />
-                            <h2>{movie.nom}</h2>
+                    {movies.map(movie =>(
+                        <Link className='film' key={movie.id} to={detailsMovie(movie.id)}>
+                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                            <h3>{movie.title}</h3>
                         </Link>
                     ))}
                    

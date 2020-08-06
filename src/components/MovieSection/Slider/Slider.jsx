@@ -38,7 +38,7 @@ const SimpleSlider = () =>{
                 {popularMovies.map((movie, i)=>(
                     <Link className='card' key={movie.id} to=''>
                         <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
-                        <h2>{movie.title}</h2>
+                        <h3>{movie.title}</h3>
                     </Link>
                 ))}
             </Slider>
