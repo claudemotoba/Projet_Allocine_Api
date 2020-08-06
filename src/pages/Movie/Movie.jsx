@@ -29,11 +29,6 @@ const Movie = () => {
            })();
     },[])
 
-
-    // const filterUser = searchMovies.filter(user => {
-    //     return user.title.includes(search)
-    // })
-
     const detailsMovie = (id) =>{
         const filterMovie = movies.filter(movie => movie.id == id)
 
@@ -45,7 +40,7 @@ const Movie = () => {
 
     return(
             <Wrapper>
-            <Titre>Movies</Titre>
+                <Titre>Movies</Titre>
                 <StyledMovie>
                     {movies.map(movie =>(
                         <Link className='film' key={movie.id} to={detailsMovie(movie.id)}>

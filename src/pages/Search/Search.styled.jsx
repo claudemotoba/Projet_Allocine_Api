@@ -1,29 +1,15 @@
 import styled from 'styled-components'
 
 const StyledSearch = styled.div`
-    width: 93%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
-    color: white;
-    image{
-        max-width: 300px;
+    display: flex;
+    width: calc(23.25%*4);
+    margin-left: 4%;
+    flex-wrap: wrap;
+    .search{
+        max-width: 290px;
         height: 250px;
         box-sizing: border-box;
-        /* border: solid red 1px; */
-        padding: 0;
         color: white;
-    }
-    form{
-        margin-left: 40%;
-    }
-    input{
-        height: 40px;
-        width: 250px;
-    }
-    h1{
-        margin-top: 50px;
-        text-align: center;
-        color: #CD0F0F;
     }
 `
 

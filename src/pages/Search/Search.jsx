@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react'
-import { Input, Menu, Image } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Wrapper from '../../components/Wrapper'
+import styled from 'styled-components'
 
 import StyledSearch from './Search.styled'
+
+const StyledHeader = styled.div`
+    form{
+        margin-left: 40%;
+    }
+    input{
+        height: 40px;
+        width: 250px;
+    }
+    h1{
+        margin-top: 50px;
+        text-align: center;
+        color: #CD0F0F;
+    }
+`
 
 const Search = ()=>{
 
@@ -26,16 +42,16 @@ const Search = ()=>{
 
     return(
         <Wrapper>
-            <StyledSearch>
-                <Menu.Menu position='right'>
+            <StyledHeader>
                     <h1>Write the name of a movie</h1>
                     <form onSubmit={submitFunction}>
-                        <input icon='search' placeholder='Search...' onChange={ e => setSearch(e.target.value.toLowerCase()) }/>
+                        <input icon='search' placeholder='Search...' onChange={ e => setSearch(e.target.value) }/>
                     </form>
                     <br></br>
-                </Menu.Menu>
+            </StyledHeader>
+            <StyledSearch>
                 {searchMovies.map(movie =>(
-                    <Link id='film' key={movie.id} to='#'>
+                    <Link className='search' key={movie.id} to='#'>
                         <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
                         <h3>{movie.title}</h3>
                     </Link>
