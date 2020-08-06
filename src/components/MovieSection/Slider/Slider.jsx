@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import axios from 'axios'
-import Users from './Users'
 import { Link } from 'react-router-dom'
 import StyledSlider from './Slider.styled'
 
@@ -20,14 +19,14 @@ const SimpleSlider = () =>{
         slidesToScroll: 1
     };
 
-    const [movies, setMovies] = useState([]);
+    const [popularMovies, setPopularMovies] = useState([]);
 
     useEffect(() => {
         (async ()=>{
-            const movie = await axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${api_key}&callback=test`)
-            console.log(movie.data);
+            const popularMovie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`)
+            console.log(popularMovie.data.results);
             
-            setMovies(movie.data)
+            setPopularMovies(popularMovie.data.results)
    
            })();
     },[])
@@ -36,10 +35,10 @@ const SimpleSlider = () =>{
         <StyledSlider>
        
             <Slider {...settings}>
-                {Users.map((user, i)=>(
-                    <Link className='card' key={i} to=''>
-                        <Image src={user.image} />
-                        <h2>{user.nom}</h2>
+                {popularMovies.map((movie, i)=>(
+                    <Link className='card' key={movie.id} to=''>
+                        <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        <h2>{movie.title}</h2>
                     </Link>
                 ))}
             </Slider>
