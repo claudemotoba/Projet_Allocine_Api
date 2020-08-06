@@ -44,7 +44,9 @@ const Movie = () => {
                 <StyledMovie>
                     {movies.map(movie =>(
                         <Link className='film' key={movie.id} to={detailsMovie(movie.id)}>
-                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        {
+                            movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        }
                             <h3>{movie.title}</h3>
                         </Link>
                     ))}
