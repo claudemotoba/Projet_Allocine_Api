@@ -1,6 +1,7 @@
 import React from 'react'
 import Wrapper from '../../components/Wrapper'
 import StyledMovie from './Movie.styled'
+import { Link } from 'react-router-dom'
 
 import { Image } from 'semantic-ui-react'
 import Users from '../../components/MovieSection/Slider/Users'
@@ -17,10 +18,10 @@ const Movie = () => {
             <Titre>Movies</Titre>
                 <StyledMovie>
                     {Users.map((user, i)=>(
-                        <div className='film'>
+                        <Link className='film'>
                             <Image src={user.image} />
                             <h2>{user.nom}</h2>
-                        </div>
+                        </Link>
                     ))}
                 </StyledMovie>
             </Wrapper>

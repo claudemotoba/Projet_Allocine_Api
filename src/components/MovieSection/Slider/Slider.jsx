@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Users from './Users'
+import { Link } from 'react-router-dom'
 import StyledSlider from './Slider.styled'
 
 const SimpleSlider = () =>{
@@ -22,10 +23,10 @@ const SimpleSlider = () =>{
        
             <Slider {...settings}>
                 {Users.map((user, i)=>(
-                    <div className='card'>
+                    <Link className='card'>
                         <Image src={user.image} />
                         <h2>{user.nom}</h2>
-                    </div>
+                    </Link>
                 ))}
             </Slider>
         </StyledSlider>

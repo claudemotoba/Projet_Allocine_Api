@@ -1,11 +1,11 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import StyledButon from './Button.styled'
 
 const ButtonExampleInverted = () => (
     <StyledButon>
-      <Button inverted>See the list of movies</Button>
+      <Link className="ui inverted button" to='/movies'>See the list of movies</Link>
     </StyledButon>
 )
 

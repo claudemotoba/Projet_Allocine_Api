@@ -10,6 +10,7 @@ const StyledMovie = styled.div`
     max-width: 290px;
     height: 250px;
     box-sizing: border-box;
+    color: white;
   }
   h1{
    

@@ -10,7 +10,8 @@ const StyledSlider = styled.div`
         height: 250px;
         box-sizing: border-box;
         /* border: solid red 1px; */
-        padding: 0
+        padding: 0;
+        color: white;
     }
     .slick-arrow{
         background-color: black;
