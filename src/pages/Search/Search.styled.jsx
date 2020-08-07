@@ -11,6 +11,22 @@ const StyledSearch = styled.div`
         box-sizing: border-box;
         color: white;
     }
+
+    @media only screen and (max-width: 900px) {
+        display: flex;
+        height: 130px;
+        h3{
+            font-size: 13px;
+        }
+        .search{
+            max-width: 25%;
+            height: 130px;
+            box-sizing: border-box;
+            /* border: solid red 1px; */
+            padding: 0;
+            color: white;
+        }
+    }
 `
 
 export default StyledSearch

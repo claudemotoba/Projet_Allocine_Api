@@ -51,7 +51,8 @@ const Movie = () => {
                         </Link>
                     ))}
                    
-                </StyledMovie>
+                </StyledMovie> 
+                <br></br><br></br>
             </Wrapper>
 
     )

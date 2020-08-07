@@ -7,10 +7,7 @@ import styled from 'styled-components'
 const StyledGenerale = styled.div`
   
   @media only screen and (max-width: 900px) {
-    .secondary{
-      /* position: fixed; */
-      height: 70px;
-    }
+    
   }
 `
 

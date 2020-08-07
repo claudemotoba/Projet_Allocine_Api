@@ -19,6 +19,11 @@ const StyledHeader = styled.div`
         text-align: center;
         color: #CD0F0F;
     }
+    @media only screen and (max-width: 900px) {
+        form{
+            margin-left: 20%;
+        }
+    }
 `
 
 const Search = ()=>{
