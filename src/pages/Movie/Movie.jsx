@@ -4,7 +4,6 @@ import StyledMovie from './Movie.styled'
 import { Link } from 'react-router-dom'
 
 import { Image } from 'semantic-ui-react'
-import Users from '../../components/MovieSection/Slider/Users'
 import styled from 'styled-components'
 import axios from 'axios'
 

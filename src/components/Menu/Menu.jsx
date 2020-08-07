@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
+import React from 'react'
+import { Menu } from 'semantic-ui-react'
 import StyledMenu from './Menu.styled'
-import Burger from '../Burger'
 import styled from 'styled-components'
 
 const StyledGenerale = styled.div`

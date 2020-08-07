@@ -1,6 +1,5 @@
 import React from 'react'
-import Menu from './Menu/Menu'
-import Burger from './Burger'
+import Burger from './Burger/Burger'
 import Footer from './Footer/Footer'
 
 const Wrapper = ({ children }) => {
