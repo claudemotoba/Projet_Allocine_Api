@@ -10,7 +10,8 @@ const Index = () => {
         <>
         <Wrapper>      
             <Section1/>
-            <MovieSection/>      
+            <MovieSection/>   
+            <br></br>   
         </Wrapper> 
         </>
     )

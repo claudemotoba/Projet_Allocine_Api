@@ -25,7 +25,7 @@ const StyledSlider = styled.div`
             font-size: 13px;
         }
         .card{
-            max-width: 300px;
+            max-width: 25vh;
             height: 130px;
             box-sizing: border-box;
             /* border: solid red 1px; */

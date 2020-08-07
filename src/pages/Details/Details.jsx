@@ -27,6 +27,7 @@ const Details = () =>{
                     <p>2.504.367.000$</p>
                 </div>
             </StyledDetails>
+            <br></br>
         </Wrapper>
     )
 }

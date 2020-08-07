@@ -6,6 +6,8 @@ const Footer = ({Lien})=>{
         <>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         <StyledFooter>
             <p>Design by kinshasa digital academy</p>
             <p>Copyring 2020</p>
