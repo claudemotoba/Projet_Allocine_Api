@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import Menu from '../Menu/Menu'
 
 const StyledBurger = styled.div`
-    width: 2rem;
-    height: 2rem;
+    width: 100%;
+    height: 2.3rem;
+    background-color: black;
     position: fixed;
-    top: 15px;
-    right: 25px;
+    top: 0;
+    right: 5px;
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
@@ -15,7 +16,9 @@ const StyledBurger = styled.div`
     display: none;
 
     div{
-        width: 2rem;
+        margin-left: 88%;
+        margin-top: 9px;
+        width: 2.3rem;
         height: 0.25rem;
         border-radius: 10px;
         transform-origin: 1px !important;
@@ -40,6 +43,7 @@ const StyledBurger = styled.div`
     }
 `
 
+
 const Burger = () => {
 
     const [open, setOpen] = useState(false)
@@ -50,8 +54,7 @@ const Burger = () => {
                 <div/>
                 <div/>
             </StyledBurger>
-            <Menu open={open}/>
-            
+            <Menu open={open}/> 
         </>
     )
 }

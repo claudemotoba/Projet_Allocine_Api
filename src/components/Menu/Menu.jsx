@@ -6,7 +6,9 @@ import styled from 'styled-components'
 const StyledGenerale = styled.div`
   
   @media only screen and (max-width: 900px) {
-    
+    .menu{
+      position: absolute;
+    }
   }
 `
 
@@ -17,6 +19,7 @@ const Header = ({ open }) => {
       <StyledGenerale>
         <Menu secondary className='menu'>
         <StyledMenu open={open}>
+        
           <Menu.Item
             style={{color:'#ffffff'}}
             name='HOME'
@@ -59,7 +62,7 @@ const Header = ({ open }) => {
               // active={activeItem === 'ABOUT  US'}
               // onClick={this.handleItemClick}
           />
-          <div className='divTaille'></div>
+          
           </StyledMenu>
         </Menu>
       

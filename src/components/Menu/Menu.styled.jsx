@@ -11,10 +11,6 @@ const StyledMenu = styled.div`
     padding-left: 13%;
     padding-top: 20px;
 
-  .divTaille{
-    display: none;
-    height: 30px;
-  }
 
   a{
      font-size: 16px;
