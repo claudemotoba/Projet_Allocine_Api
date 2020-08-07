@@ -5,9 +5,9 @@ const Text = () => {
     return(
         <StyledText>
             <h1> 
-                The smartest move the devil has ever <br></br>
-                never succeeded is to make believe in everything <br></br>
-                the world that it did not exist. <br></br>
+                The smartest move the devil has ever 
+                never succeeded is to make believe in everything 
+                the world that it did not exist.
             </h1>
         </StyledText>
     )

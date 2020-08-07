@@ -1,13 +1,12 @@
 import React from 'react'
 import Menu from './Menu/Menu'
+import Burger from './Burger'
 import Footer from './Footer/Footer'
 
 const Wrapper = ({ children }) => {
     return(
         <div>
-            <div>
-                <Menu/>
-            </div>
+            <Burger/>
             <br />
             <div>{children}</div>
             <Footer/>

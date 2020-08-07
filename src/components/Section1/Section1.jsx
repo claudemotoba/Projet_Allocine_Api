@@ -9,13 +9,27 @@ const StyledSection1 = styled.div`
     background-image: url(${Img});
     height: 50vh;
     margin-top: 0;
+
+@media only screen and (max-width: 900px) {
+  /* For mobile phones: */
+  height:30%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  h1{
+      font-size: 22px;
+      padding-top: 0;
+  }
+  .button{
+    margin-left:0; 
+  }
+}
 `
 
 const Section1 = () =>{
     return(
         <StyledSection1>
             <Text/>
-            <Buton/>
+            <Buton className='button'/>
         </StyledSection1>
     )
 }
