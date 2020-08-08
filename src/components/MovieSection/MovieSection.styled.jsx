@@ -9,6 +9,7 @@ const StyledMovieSection = styled.div`
         color: #CD0F0F;
     }
     @media only screen and (max-width: 900px) {
+        margin-top: 50px;
         h1{
             font-size: 22px;
         }

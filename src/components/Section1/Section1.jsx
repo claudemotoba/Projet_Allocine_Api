@@ -8,7 +8,7 @@ import Video from '../../video/Avengers.mp4'
 const StyledVideo = styled.video`
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 50vh;
     object-fit: cover;
     z-index: -1
 `
@@ -19,12 +19,12 @@ const StyledSection1 = styled.div`
 
 @media only screen and (max-width: 900px) {
   /* For mobile phones: */
-  height:30%;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  padding-top: 40px;
+  height:50vh;
   h1{
       font-size: 22px;
       padding-top: 0;
+      font-weight: 400;
   }
   .button{
     margin-left:0; 
@@ -35,7 +35,7 @@ const StyledSection1 = styled.div`
 const Section1 = () =>{
     return(
         <StyledSection1>
-            <StyledVideo autoPlay loop muted>
+            <StyledVideo autoPlay loop>
                 <source  src={Video} type='video/mp4'/>
             </StyledVideo>
             <Text/>
