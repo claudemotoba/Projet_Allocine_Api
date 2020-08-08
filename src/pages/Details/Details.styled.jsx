@@ -16,10 +16,16 @@ const StyledDetails = styled.div`
     }
     @media only screen and (max-width: 900px) {
         display: block;
+        
         .image{
+            margin-left: 4%;
             max-width: 100%;
             max-height: 25vh;
             height: 400px
+        }
+        h1{
+            margin-top: 25px;
+            color: 
         }
     }
 `

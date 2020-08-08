@@ -58,7 +58,7 @@ const Header = ({ open }) => {
           <Menu.Item
               style={{color:'#ffffff'}}
               name='ABOUT  US'
-              href='/about-us/'
+              href='#'
               // active={activeItem === 'ABOUT  US'}
               // onClick={this.handleItemClick}
           />

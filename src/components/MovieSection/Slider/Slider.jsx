@@ -40,7 +40,7 @@ const SimpleSlider = () =>{
                     {
                         movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
                     }
-                        <h3>{movie.title}</h3>
+                        <h3>{movie.original_title}</h3>
                     </Link>
                 ))}
             </Slider>
