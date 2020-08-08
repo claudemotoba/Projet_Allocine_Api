@@ -56,7 +56,7 @@ const Search = ()=>{
             </StyledHeader>
             <StyledSearch>
                 {searchMovies.map(movie =>(
-                    <Link className='search' key={movie.id} to='#'>
+                    <Link className='search' key={movie.id} to={`/movies/${movie.id}`}>
                     {
                         movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
                     }
