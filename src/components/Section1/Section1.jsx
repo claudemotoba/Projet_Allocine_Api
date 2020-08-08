@@ -3,10 +3,17 @@ import Buton from './Buton/Buton'
 import Text from './Text/Text'
 import styled from 'styled-components'
 
-import Img from '../../images/font.png'
+import Video from '../../video/Avengers.mp4'
+
+const StyledVideo = styled.video`
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    z-index: -1
+`
 
 const StyledSection1 = styled.div`
-    background-image: url(${Img});
     height: 50vh;
     margin-top: 0;
 
@@ -28,6 +35,9 @@ const StyledSection1 = styled.div`
 const Section1 = () =>{
     return(
         <StyledSection1>
+            <StyledVideo autoPlay>
+                <source  src={Video} type='video/mp4'/>
+            </StyledVideo>
             <Text/>
             <Buton className='button'/>
         </StyledSection1>

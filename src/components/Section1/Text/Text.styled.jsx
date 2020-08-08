@@ -7,8 +7,8 @@ const StyledText = styled.div`
     h1{
         padding-top: 50px;
         font-size: 32px;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 25%;
+        padding-right: 25%;
         text-align: center;
     }
 `
