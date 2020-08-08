@@ -21,20 +21,12 @@ const Movie = () => {
     useEffect(() => {
         (async ()=>{
             const movie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=2`)
-            // console.log(movie.data.results);
+            console.log(movie.data.results);
             setMovies(movie.data.results)
 
    
            })();
     },[])
-
-    const detailsMovie = (id) =>{
-        const filterMovie = movies.filter(movie => movie.id == id)
-
-        const newCurrentMovie = filterMovie.length > 0 ? filterMovie[0] : null
-
-        //setMovies({ currentMovies: filterMovie })
-    }
     
 
     return(
@@ -42,7 +34,7 @@ const Movie = () => {
                 <Titre>Movies</Titre>
                 <StyledMovie>
                     {movies.map(movie =>(
-                        <Link className='film' key={movie.id} to={detailsMovie(movie.id)}>
+                        <Link className='film' key={movie.id} to={`/movies/${movie.id}`} >
                         {
                             movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
                         }

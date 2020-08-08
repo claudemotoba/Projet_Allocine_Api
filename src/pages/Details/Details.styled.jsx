@@ -6,10 +6,13 @@ const StyledDetails = styled.div`
     display: flex;
     .image{
         max-width: 500px;
-        height: 400px
+        height: 300px
     }
     .content{
         margin-left: 5%;
+    }
+    p, span{
+        font-size: 16px;
     }
     @media only screen and (max-width: 900px) {
         display: block;

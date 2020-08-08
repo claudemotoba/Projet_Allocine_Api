@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter , Route, Switch } from "react-router-dom";
 
 import Accueil from './pages/Home/Home';
 import Movie from './pages/Movie/Movie'
@@ -9,24 +9,14 @@ import Search from './pages/Search/Search'
 
 function App() {
   return (
-    <Router>
-    <div className="App">
+    <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Accueil/>
-        </Route>
-        <Route path="/movies">
-          <Movie/>
-        </Route>
-        <Route path="/about-us">
-          <Details/>
-        </Route>
-        <Route path="/search">
-          <Search/>
-        </Route>
+        <Route exact path="/" component={Accueil} />
+        <Route exact path="/movies/:id" component={Details} />
+        <Route exact path="/movies" component={Movie} />
+        <Route exact path="/search" component={Search}/>
       </Switch>
-    </div>
-  </Router>
+    </BrowserRouter>
   );
 }
 
