@@ -16,7 +16,7 @@ const Movie = () => {
     
     const api_key = '1ea7ac90e55beb953ffcdb03733ccf92'
 
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([])
 
     useEffect(() => {
         (async ()=>{
