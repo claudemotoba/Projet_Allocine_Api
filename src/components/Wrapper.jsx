@@ -14,7 +14,6 @@ const Wrapper = ({ children }) => {
     return(
         <StyledWrapper>
             <Burger/>
-            <br />
             <div>{children}</div>
             <Footer/>
         </StyledWrapper>

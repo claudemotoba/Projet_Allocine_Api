@@ -31,7 +31,6 @@ const StyledSection1 = styled.div`
   }
 }
 `
-
 const Section1 = () =>{
     return(
         <StyledSection1>
@@ -43,5 +42,6 @@ const Section1 = () =>{
         </StyledSection1>
     )
 }
+
 
 export default Section1

@@ -19,11 +19,13 @@ const StyledMovie = styled.div`
         display: flex;
         height: 130px;
         h3{
-            font-size: 13px;
+            margin-top: 0;
+            padding-top: 10px;
+            font-size: 10px;
         }
         .film{
             max-width: 25%;
-            height: 130px;
+            height: 115px;
             box-sizing: border-box;
             /* border: solid red 1px; */
             padding: 0;

@@ -5,7 +5,7 @@ const StyledButon = styled.div`
     margin-top: 2%;
     @media only screen and (max-width: 900px) {
         /* For mobile phones: */
-        margin-left:30%;
+        margin-left:27%;
     }
 `
 
