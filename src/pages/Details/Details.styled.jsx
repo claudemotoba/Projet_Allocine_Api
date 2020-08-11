@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const StyledDetails = styled.div`
     margin-left: 3.5%;
     margin-right: 7.5%;
+    margin-bottom: 5%;
     display: flex;
     .image{
         max-width: 500px;
@@ -25,7 +26,6 @@ const StyledDetails = styled.div`
         }
         h1{
             margin-top: 25px;
-            color: 
         }
     }
 `
