@@ -34,11 +34,12 @@ const StyledSection1 = styled.div`
 const Section1 = () =>{
     return(
         <StyledSection1>
-            <StyledVideo autoPlay loop>
+            <StyledVideo autoPlay loop muted>
                 <source  src={Video} type='video/mp4'/>
             </StyledVideo>
             <Text/>
             <Buton className='button'/>
+            
         </StyledSection1>
     )
 }
