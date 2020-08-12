@@ -15,6 +15,9 @@ const StyledMenu = styled.div`
   a{
      font-size: 16px;
   }
+  input{
+    height: 40px;
+  }
   @media only screen and (max-width: 900px) {
 
       transform: ${({open})=> open ? 'translateX(0)' : 'translateX(100%)' } ;

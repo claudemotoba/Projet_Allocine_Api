@@ -62,7 +62,10 @@ const Header = ({ open }) => {
               // active={activeItem === 'ABOUT  US'}
               // onClick={this.handleItemClick}
           />
-          
+          <form>
+            <input icon='search' placeholder='Search...'/>
+          </form>
+    
           </StyledMenu>
         </Menu>
       

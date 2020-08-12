@@ -49,9 +49,7 @@ const Search = ()=>{
         <Wrapper>
             <StyledHeader>
                     <h1>Write the name of a movie</h1>
-                    <form onSubmit={submitFunction}>
-                        <input icon='search' placeholder='Search...' onChange={ e => setSearch(e.target.value) }/>
-                    </form>
+                    
                     <br></br>
             </StyledHeader>
             <StyledSearch>
