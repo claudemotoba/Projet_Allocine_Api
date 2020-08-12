@@ -35,6 +35,9 @@ const StyledSimilarMovie = styled.div`
             padding: 0;
             color: white;
         }
+        h1{
+            margin-left: 3.5%;
+        }
         margin-bottom: 10%;
     }
 `

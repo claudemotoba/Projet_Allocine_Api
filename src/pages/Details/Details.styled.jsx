@@ -17,10 +17,11 @@ const StyledDetails = styled.div`
     }
     @media only screen and (max-width: 900px) {
         display: block;
-        
         .image{
+            margin-top: 10px;
             margin-left: 4%;
-            max-width: 100%;
+            margin-right: 4%;
+            max-width: 100vh;
             max-height: 25vh;
             height: 400px
         }

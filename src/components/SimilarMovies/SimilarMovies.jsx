@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import StyledSlider from './SimilarMovies.styled'
+import StyledSimilar from './SimilarMovies.styled'
 
 const SimpleSlider = ({movieId}) =>{
     const api_key = '1ea7ac90e55beb953ffcdb03733ccf92'
@@ -19,24 +19,24 @@ const SimpleSlider = ({movieId}) =>{
         slidesToScroll: 1
     };
 
-    const [popularMovies, setPopularMovies] = useState([]);
+    const [similarMovies, setsimilarMovies] = useState([]);
 
     useEffect(() => {
         (async ()=>{
-            const popularMovie = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${api_key}&language=en-US&page=1`)
+            const simMov = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${api_key}&language=en-US&page=1`)
             
             
-            setPopularMovies(popularMovie.data.results)
-            console.log(popularMovie.data.results);
+            setsimilarMovies(simMov.data.results)
+            console.log(simMov.data.results);
    
            })();
     },[])
 
     return (
-        <StyledSlider>
+        <StyledSimilar>
             <h1>Similar movies</h1>
             <Slider {...settings}>
-                {popularMovies.map((movie, i)=>(
+                {similarMovies.map((movie, i)=>(
                     <Link className='similar' key={movie.id} to={`/movies/${movie.id}`}>
                     {
                         movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
@@ -45,7 +45,7 @@ const SimpleSlider = ({movieId}) =>{
                     </Link>
                 ))}
             </Slider>
-        </StyledSlider>
+        </StyledSimilar>
     )
 }
 export default SimpleSlider;

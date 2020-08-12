@@ -20,7 +20,7 @@ const Movie = () => {
 
     useEffect(() => {
         (async ()=>{
-            const movie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`)
+            const movie = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=2`)
             console.log(movie.data.results);
             setMovies(movie.data.results)
 
