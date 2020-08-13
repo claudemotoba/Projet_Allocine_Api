@@ -16,7 +16,9 @@ const StyledMenu = styled.div`
      font-size: 16px;
   }
   input{
-    height: 40px;
+    margin-top: 15px;
+    margin-left: 40px;
+    height: 25px;
   }
   @media only screen and (max-width: 900px) {
 
