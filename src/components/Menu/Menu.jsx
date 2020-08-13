@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
+
+import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
+
 import { Menu } from 'semantic-ui-react'
 import StyledMenu from './Menu.styled'
-import styled from 'styled-components'
 
 const StyledGenerale = styled.div`
   
@@ -13,22 +16,14 @@ const StyledGenerale = styled.div`
 `
 
 
-const Header = ({ open, soumissionForm, }) => {
+const Header = ({ open }) => {
 
     const [search, setSearch] = useState([]);
-    const [searchMovies, setSearchMovies] = useState([]);
+    const history = useHistory()
 
-    const submitFunction = (e)=>{
-      e.preventDefault()
-      
-          fetch(`https://api.themoviedb.org/3/search/movie?api_key=1ea7ac90e55beb953ffcdb03733ccf92&query=${search}`)
-          .then(data => data.json())
-          .then(data => {
-              console.log(data);
-              setSearchMovies(data.results)
-          })
-         
-              // console.log(searchMovie.data);
+    const submitFunction = (e, search)=>{
+          console.log(search);
+          history.push(`/search/${search}`)
           
   }
 
@@ -60,8 +55,8 @@ const Header = ({ open, soumissionForm, }) => {
           />
           <Menu.Item
               style={{color:'#ffffff'}}
-              name='SEARCH'
-              href='/search'
+              name='ABOUT US'
+              href='#'
               // active={activeItem === 'CONTACT'}
               // onClick={this.handleItemClick}
           />
@@ -72,7 +67,7 @@ const Header = ({ open, soumissionForm, }) => {
               // active={activeItem === 'CONTACT'}
               // onClick={this.handleItemClick}
           />
-          <form onSubmit={submitFunction}>
+          <form onSubmit={(e)=> submitFunction(e, search)}>
             <input icon='search' placeholder='Search...' onChange={ e => setSearch(e.target.value)}/>
           </form>
           </StyledMenu>

@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Wrapper from '../../components/Wrapper'
 import styled from 'styled-components'
 
 import StyledSearch from './Search.styled'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 const StyledHeader = styled.div`
     form{
         margin-left: 40%;
     }
-    input{
-        height: 40px;
-        width: 250px;
-    }
     h1{
         margin-top: 50px;
-        text-align: center;
+        margin-left: 3.5%;
         color: #CD0F0F;
     }
     @media only screen and (max-width: 900px) {
@@ -29,26 +27,23 @@ const StyledHeader = styled.div`
 const Search = ()=>{
 
     const [searchMovies, setSearchMovies] = useState([]);
-    const [search, setSearch] = useState([]);
+    let request = useParams()
 
-    const submitFunction = (e)=>{
-        e.preventDefault()
-        
-            fetch(`https://api.themoviedb.org/3/search/movie?api_key=1ea7ac90e55beb953ffcdb03733ccf92&query=${search}`)
+        useEffect(() => {
+
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=1ea7ac90e55beb953ffcdb03733ccf92&query=${request.query}`)
             .then(data => data.json())
             .then(data => {
                 console.log(data);
                 setSearchMovies(data.results)
             })
-           
-                // console.log(searchMovie.data);
+        },[])
+        //window.location.reload();
             
-    }
-
     return(
         <Wrapper>
             <StyledHeader>
-                    <h1>Write the name of a movie</h1>
+                    <h1>Result</h1>
                     
                     <br></br>
             </StyledHeader>
