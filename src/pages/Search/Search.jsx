@@ -43,7 +43,7 @@ const Search = ()=>{
     return(
         <Wrapper>
             <StyledHeader>
-                    <h1>Result</h1>
+                    <h1>Results</h1>
                     
                     <br></br>
             </StyledHeader>

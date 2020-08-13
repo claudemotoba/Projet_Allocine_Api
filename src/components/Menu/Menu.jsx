@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 
-import { Menu } from 'semantic-ui-react'
+import { Menu, Input } from 'semantic-ui-react'
 import StyledMenu from './Menu.styled'
 
 const StyledGenerale = styled.div`
@@ -68,7 +68,7 @@ const Header = ({ open }) => {
               // onClick={this.handleItemClick}
           />
           <form onSubmit={(e)=> submitFunction(e, search)}>
-            <input icon='search' placeholder='Search...' onChange={ e => setSearch(e.target.value)}/>
+            <Input icon='search' className='input' placeholder='Search...' onChange={ e => setSearch(e.target.value)}/>
           </form>
           </StyledMenu>
         </Menu>

@@ -15,6 +15,15 @@ const StyledFooter = styled.footer`
         font-size: 16px;
         margin-bottom: 0
     }
+    @media only screen and (max-width: 900px) {
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        padding: 10px;
+        p{
+
+        }
+    }
 
 `;
 

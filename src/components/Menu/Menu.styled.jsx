@@ -7,7 +7,7 @@ const StyledMenu = styled.div`
     color: white;
     height: 80px;
     width: 100%;
-    margin-left: 15%;
+    margin-left: 10%;
     padding-left: 13%;
     padding-top: 20px;
 
@@ -15,7 +15,7 @@ const StyledMenu = styled.div`
   a{
      font-size: 16px;
   }
-  input{
+  .input{
     margin-top: 15px;
     margin-left: 40px;
     height: 25px;
@@ -36,6 +36,10 @@ const StyledMenu = styled.div`
       left: 0%;
       height: 45vh;
       margin-top: 0;
+
+      .input{
+        margin-left: 100px;
+      }
   }
 
 `;
