@@ -40,7 +40,7 @@ const StyledMovie = styled.div`
     padding: 15px;
     z-index: 100;
     width: 100%;
-    max-height: 100%;
+    max-height: 100px;
     overflow: hidden;
     top: 50%;
     left: 0;
@@ -52,7 +52,7 @@ const StyledMovie = styled.div`
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-  
+
   figure.pushup .img {
     -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
