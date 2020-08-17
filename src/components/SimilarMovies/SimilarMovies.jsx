@@ -39,7 +39,7 @@ const SimpleSlider = ({movieId}) =>{
                 {similarMovies.map((movie, i)=>(
                     <Link className='similar' key={movie.id} to={`/movies/${movie.id}`}>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        movie.backdrop_path === null ? <Image src={`https://lh3.googleusercontent.com/proxy/FmQs-LvHGTThKZwqwi7DVxCqIclRqhy1R1MqnOE6O8CY-eolxA02JmzC5pt923ElRxPqB3c7h89fmiWQw4U22o4C6lKb2umxQgU0mOqfcpo5qhF97kFObGQ3L8mn4QeV1YKhBysMrpWohjk34ZFHV11U5LMURPGuav_8oQ2Slw`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
                     }
                         <h3>{movie.original_title}</h3>
                     </Link>

@@ -7,9 +7,13 @@ const StyledSearch = styled.div`
     flex-wrap: wrap;
     .search{
         max-width: 290px;
-        height: 250px;
+        max-height: 250px;
         box-sizing: border-box;
         color: white;
+    }
+    .img{
+        max-height: 163px; 
+        max-width: 290px; 
     }
 
     @media only screen and (max-width: 900px) {

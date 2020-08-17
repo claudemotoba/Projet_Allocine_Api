@@ -7,7 +7,7 @@ const StyledSimilarMovie = styled.div`
     color: white;
     .similar{
         max-width: 300px;
-        height: 250px;
+        max-height: 250px !important;
         box-sizing: border-box;
         /* border: solid red 1px; */
         padding: 0;

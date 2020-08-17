@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import ContentLoader, { rect } from 'react-content-loader'
 
 import Wrapper from '../../components/Wrapper'
 import { Image } from 'semantic-ui-react'
