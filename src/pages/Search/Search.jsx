@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import { Image } from 'semantic-ui-react'
+import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+
 import Wrapper from '../../components/Wrapper'
 import styled from 'styled-components'
-
 import StyledSearch from './Search.styled'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
 
 const StyledHeader = styled.div`
     form{
         margin-left: 40%;
     }
-    h1{
-        margin-top: 50px;
-        margin-left: 3.5%;
-        color: #CD0F0F;
-    }
+
     @media only screen and (max-width: 900px) {
         form{
             margin-left: 20%;
         }
     }
+`
+const Titre = styled.h3`
+    margin-top: 50px;
+    margin-left: 7.5%;
+    color: #CD0F0F;
 `
 
 const Search = ()=>{
@@ -43,15 +43,22 @@ const Search = ()=>{
     return(
         <Wrapper>
             <StyledHeader>
-                    <h1>Results</h1>
-                    
-                    <br></br>
+                    <Titre>RESULTS</Titre>
+
             </StyledHeader>
             <StyledSearch>
                 {searchMovies.map(movie =>(
-                    <Link className='search' key={movie.id} to={`/movies/${movie.id}`}>
+                    <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        movie.poster_path === null ? 
+                        <figure>
+                            <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img' alt=''/>
+                            <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
+                        </figure> :               
+                        <figure className='figurefx pushup'>
+                            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}className='img' alt=''/>
+                            <figcaption>  Popularity : {movie.popularity}%⭐⭐⭐ </figcaption>
+                        </figure>
                     }
                         
                         <h3>{movie.original_title}</h3>

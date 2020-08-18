@@ -4,29 +4,35 @@ const StyledMovie = styled.div`
 
   display: flex;
   width: calc(23.25%*4);
-  margin-left: 4%;
+  margin-left: 2%;
+  margin-right: 4%;
   flex-wrap: wrap;
+  justify-content: space-around;
 
-  .film{
-    max-width: 290px;
-    height: 250px;
+  .img{
+    max-width: 100vh;
+    height: 350px;
     box-sizing: border-box;
     color: white;
-    margin-bottom: 20px;
-
-
+    border-radius: 10px;
+  }
+  h3{
+    margin-left: 15%;
+  }
+  .card{
+    color: white;
+    width: 250px;
   }
   figure:hover {
   box-shadow: 0 0 20px rgba(0,0,0,.3)
   }
 
   figure.figurefx {
-    width: 290px;
-    margin: 30px auto;
+    width: 100vh;
     padding: 0;
     display: block;
     position: relative;
-    overflow: hidden; /* hide overflowing elements by default */
+    overflow: hidden; 
   }
 
   figure.figurefx figcaption {
@@ -39,8 +45,7 @@ const StyledMovie = styled.div`
     background: transparent;
     padding: 15px;
     z-index: 100;
-    width: 100%;
-    max-height: 100px;
+    width:39vh;
     overflow: hidden;
     top: 50%;
     left: 0;

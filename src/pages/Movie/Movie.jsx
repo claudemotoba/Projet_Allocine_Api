@@ -7,9 +7,10 @@ import { Image } from 'semantic-ui-react'
 import styled from 'styled-components'
 import axios from 'axios'
 
-const Titre = styled.h1`
+const Titre = styled.h3`
     color: #CD0F0F;
-    margin-left: 3.5%;
+    margin-left: 7%;
+    padding-top: 3%;
 `
 
 const Movie = () => {
@@ -31,14 +32,18 @@ const Movie = () => {
 
     return(
             <Wrapper>
-                <Titre>Movies</Titre>
+                <Titre>MOVIES</Titre>
                 <StyledMovie>
                     {movies.map(movie =>(
-                        <Link className='film' key={movie.id} to={`/movies/${movie.id}`} >
+                        <Link className='card' key={movie.id} to={`/movies/${movie.id}`} >
                         {
-                            movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> :               
+                            movie.poster_path === null ? 
+                            <figure>
+                                <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`}/>
+                                <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
+                            </figure> :               
                             <figure className='figurefx pushup'>
-                                <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}className='img' alt=''/>
                                 <figcaption>  Popularity : {movie.popularity}%⭐⭐⭐ </figcaption>
                             </figure>
                         }

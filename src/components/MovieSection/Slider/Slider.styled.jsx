@@ -1,22 +1,26 @@
 import styled from 'styled-components'
 
 const StyledSlider = styled.div`
-    width: 93%;
+    width: calc(23.25%*4);
     margin-left: 3.5%;
     margin-right: 3.5%;
     color: white;
     .card{
-        max-width: 300px;
-        height: 250px;
-        box-sizing: border-box;
-        /* border: solid red 1px; */
-        padding: 0;
         color: white;
+        width: 250px;
+        margin-right: 0;
     }
     .slick-arrow{
         background-color: black;
         height: 20px;
         width: 20px;
+        border-radius: 10px;
+    }
+    .img{
+        max-width: 100vh;
+        height: 350px;
+        box-sizing: border-box;
+        color: white;
         border-radius: 10px;
     }
 

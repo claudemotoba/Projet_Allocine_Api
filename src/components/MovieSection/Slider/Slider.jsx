@@ -38,9 +38,13 @@ const SimpleSlider = () =>{
                 {popularMovies.map((movie, i)=>(
                     <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : 
+                        movie.poster_path === null ? 
+                        <figure>
+                            <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`}/>
+                            <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
+                        </figure> : 
                         <figure className='figurefx pushup'>
-                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} />
+                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='img'/>
                             <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
                         </figure>
                     }

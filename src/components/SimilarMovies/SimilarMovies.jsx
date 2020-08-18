@@ -37,11 +37,16 @@ const SimpleSlider = ({movieId}) =>{
             <h1>Similar movies</h1>
             <Slider {...settings}>
                 {similarMovies.map((movie, i)=>(
-                    <Link className='similar' key={movie.id} to={`/movies/${movie.id}`}>
+                    <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://lh3.googleusercontent.com/proxy/FmQs-LvHGTThKZwqwi7DVxCqIclRqhy1R1MqnOE6O8CY-eolxA02JmzC5pt923ElRxPqB3c7h89fmiWQw4U22o4C6lKb2umxQgU0mOqfcpo5qhF97kFObGQ3L8mn4QeV1YKhBysMrpWohjk34ZFHV11U5LMURPGuav_8oQ2Slw`}/> : 
+                        movie.poster_path === null ? 
                         <figure className='figurefx pushup'>
-                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} />
+                            <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img'/>
+                            <figcaption>Popularity : {movie.popularity}⭐⭐⭐</figcaption>
+                        </figure>
+                         : 
+                        <figure className='figurefx pushup'>
+                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='img'/>
                             <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
                         </figure>
                     }

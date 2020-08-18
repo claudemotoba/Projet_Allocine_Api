@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import ContentLoader, { rect } from 'react-content-loader'
+import { MdDateRange } from 'react-icons/md';
 
 import Wrapper from '../../components/Wrapper'
 import { Image } from 'semantic-ui-react'
@@ -36,10 +37,10 @@ const Details = (props) =>{
         <Wrapper>
             <br></br>
             <br></br>
-            <StyledDetails>
+            <StyledDetails style={{backgroundImage:`url(https://image.tmdb.org/t/p/w500/${movie.backdrop_path})`}}>
                 <div className='img'>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`} className='image'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} className='image'/>
+                        movie.poster_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`} className='image'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='image'/>
                     }
                 </div>
                 <div className='content'>
@@ -52,7 +53,7 @@ const Details = (props) =>{
                             )
                         }
                     </p>
-                    <p>
+                    <p> 
                         {movie.release_date}
                     </p>
                     <p> <span> Available in    </span> 
@@ -70,7 +71,7 @@ const Details = (props) =>{
                             }
                     </p>
                     <p> 
-                         {movie.revenue}$ at the Box office
+                         {movie.revenue === 0 ? movie.revenue='no defined ': movie.revenue}$ at the Box office
                     
                     </p>
                 </div>
