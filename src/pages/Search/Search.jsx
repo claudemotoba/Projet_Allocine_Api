@@ -51,7 +51,7 @@ const Search = ()=>{
                     <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
                     {
                         movie.poster_path === null ? 
-                        <figure>
+                        <figure className='figurefx pushup'>
                             <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img' alt=''/>
                             <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
                         </figure> :               
@@ -61,7 +61,7 @@ const Search = ()=>{
                         </figure>
                     }
                         
-                        <h3>{movie.original_title}</h3>
+                        <p>{movie.original_title}</p>
                     </Link>
                 ))}
             </StyledSearch>

@@ -23,7 +23,11 @@ const StyledSlider = styled.div`
         color: white;
         border-radius: 10px;
     }
-
+    p{
+        margin-right: 10%;
+        text-align: center;
+        font-size: 17px;
+    }
     figure:hover {
         box-shadow: 0 0 20px rgba(0,0,0,.3)
     }
@@ -47,7 +51,7 @@ const StyledSlider = styled.div`
         background: transparent;
         padding: 15px;
         z-index: 100;
-        width: 100%;
+        width: 90%;
         max-height: 100%;
         overflow: hidden;
         top: 50%;

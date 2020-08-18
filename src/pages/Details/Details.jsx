@@ -5,6 +5,7 @@ import { Skeleton, Bone }  from 'react-loading-skeleton-placeholders'
 import Wrapper from '../../components/Wrapper'
 import { Image } from 'semantic-ui-react'
 import StyledDetails from './Details.styled'
+import Img  from '../../images/tt.jpg'
 
 import axios from 'axios'
 import SimilarMovie from '../../components/SimilarMovies/SimilarMovies'
@@ -36,7 +37,7 @@ const Details = (props) =>{
         <Wrapper>
             <br></br>
             <br></br>
-            <StyledDetails style={{backgroundImage:`url(https://image.tmdb.org/t/p/w500/${movie.backdrop_path})`}}>
+            <StyledDetails style={{backgroundImage:`url(${Img})`}}>
                 <div className='img'>
                     {
                         movie.poster_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`} className='image'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='image'/>

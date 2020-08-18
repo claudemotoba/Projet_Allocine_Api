@@ -16,8 +16,10 @@ const StyledMovie = styled.div`
     color: white;
     border-radius: 10px;
   }
-  h3{
-    margin-left: 15%;
+  p{
+    margin-left: 20%;
+    text-align: center;
+    font-size: 17px;
   }
   .card{
     color: white;

@@ -55,7 +55,7 @@ const SimpleSlider = ({movieId}) =>{
                             <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
                         </figure>
                     }
-                        <h3>{movie.original_title}</h3>
+                        <p>{movie.original_title}</p>
                     </Link>
                 ))}
             </Slider>

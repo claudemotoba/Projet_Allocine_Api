@@ -6,13 +6,13 @@ const StyledDetails = styled.div`
     margin-bottom: 5%;
     display: flex;
     background-size: cover;
-    height: 73.5vh;
+    height: 73.8vh;
     border-radius: 10px;
     position: relative;
     z-index: -3;
     .image{
         max-width: 400px !important;
-        height: 470px;
+        height: 73.8vh;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
