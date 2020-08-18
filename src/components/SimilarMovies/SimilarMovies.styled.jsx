@@ -5,6 +5,7 @@ const StyledSimilarMovie = styled.div`
     margin-left: 7.5%;
     margin-right: 7.5%;
     color: white;
+    
     .card{
         color: white;
         width: 250px;
@@ -23,9 +24,7 @@ const StyledSimilarMovie = styled.div`
         color: white;
         border-radius: 10px;
     }
-    h1{
-        margin-left: 6px;
-    }
+
     figure:hover {
         box-shadow: 0 0 20px rgba(0,0,0,.3)
     }
@@ -49,7 +48,7 @@ const StyledSimilarMovie = styled.div`
         background: transparent;
         padding: 15px;
         z-index: 100;
-        width: 100%;
+        width: 80%;
         max-height: 100%;
         overflow: hidden;
         top: 50%;

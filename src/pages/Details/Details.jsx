@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import ContentLoader, { rect } from 'react-content-loader'
-import { MdDateRange } from 'react-icons/md';
+import { Skeleton, Bone }  from 'react-loading-skeleton-placeholders'
 
 import Wrapper from '../../components/Wrapper'
 import { Image } from 'semantic-ui-react'
@@ -44,7 +43,7 @@ const Details = (props) =>{
                     }
                 </div>
                 <div className='content'>
-                    <h1>{movie.original_title} </h1>
+                    <h1>{movie.original_title || <Bone/>} </h1>
                     <p>{movie.overview} </p>
                     <p>
                         {Array.isArray(movie.genres) &&

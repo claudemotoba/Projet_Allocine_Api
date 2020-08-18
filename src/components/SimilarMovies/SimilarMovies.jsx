@@ -3,10 +3,15 @@ import Slider from "react-slick";
 import { Image } from 'semantic-ui-react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components'
 
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import StyledSimilar from './SimilarMovies.styled'
+
+const Titre = styled.h3`
+    color: #CD0F0F;
+`
 
 const SimpleSlider = ({movieId}) =>{
     const api_key = '1ea7ac90e55beb953ffcdb03733ccf92'
@@ -34,7 +39,7 @@ const SimpleSlider = ({movieId}) =>{
 
     return (
         <StyledSimilar>
-            <h1>Similar movies</h1>
+            <Titre>SIMILAR MOVIES</Titre>
             <Slider {...settings}>
                 {similarMovies.map((movie, i)=>(
                     <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
