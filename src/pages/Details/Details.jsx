@@ -49,7 +49,7 @@ const Details = (props) =>{
                     <p>
                         {Array.isArray(movie.genres) &&
                             movie.genres.map(mov => 
-                                <span key={mov.id} className="ml-2">{mov.name+' ,'}</span>
+                                <span key={mov.id}>{mov.name+' ,'}</span>
                             )
                         }
                     </p>
@@ -59,7 +59,7 @@ const Details = (props) =>{
                     <p> <span> Available in    </span> 
                         {Array.isArray(movie.spoken_languages) &&
                             movie.spoken_languages.map((lang, i) => 
-                                <span key={i} className="ml-2">{lang.name+' ,'}</span>
+                                <span key={i}>{lang.name+' ,'}</span>
                             )
                         }
                     </p> 

@@ -18,6 +18,11 @@ const StyledSearch = styled.div`
         color: white;
         border-radius: 10px;
     }
+    .image{
+        height: 350px;
+        width: 247px;
+        border-radius: 10px;
+    }
     p{
         margin-right: 10%;
         text-align: center;

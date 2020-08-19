@@ -52,7 +52,7 @@ const Search = ()=>{
                     {
                         movie.poster_path === null ? 
                         <figure className='figurefx pushup'>
-                            <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img' alt=''/>
+                            <Image src={`https://previews.123rf.com/images/pavelstasevich/pavelstasevich1811/pavelstasevich181101027/112815900-no-image-available-icon-flat-vector.jpg`} className='image' alt=''/>
                             <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
                         </figure> :               
                         <figure className='figurefx pushup'>
