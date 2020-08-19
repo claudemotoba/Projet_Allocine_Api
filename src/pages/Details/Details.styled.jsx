@@ -1,16 +1,23 @@
 import styled from 'styled-components'
 
 const StyledDetails = styled.div`
-    margin-left: 3.5%;
+    margin-left: 7.5%;
     margin-right: 7.5%;
     margin-bottom: 5%;
     display: flex;
+    background-size: cover;
+    height: 73.8vh;
+    border-radius: 10px;
+    position: relative;
+    z-index: -3;
     .image{
-        max-width: 500px;
-        height: 300px
+        max-width: 400px !important;
+        height: 73.8vh;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
     .content{
-        margin-left: 5%;
+        padding: 30px
     }
     p, span{
         font-size: 16px;
@@ -23,7 +30,8 @@ const StyledDetails = styled.div`
             margin-right: 4%;
             max-width: 100vh;
             max-height: 25vh;
-            height: 400px
+            height: 400px;
+            border-radius: 10px;
         }
         h1{
             margin-top: 25px;

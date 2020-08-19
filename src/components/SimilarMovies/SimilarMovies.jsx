@@ -3,10 +3,15 @@ import Slider from "react-slick";
 import { Image } from 'semantic-ui-react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components'
 
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import StyledSimilar from './SimilarMovies.styled'
+
+const Titre = styled.h3`
+    color: #CD0F0F;
+`
 
 const SimpleSlider = ({movieId}) =>{
     const api_key = '1ea7ac90e55beb953ffcdb03733ccf92'
@@ -34,14 +39,23 @@ const SimpleSlider = ({movieId}) =>{
 
     return (
         <StyledSimilar>
-            <h1>Similar movies</h1>
+            <Titre>SIMILAR MOVIES</Titre>
             <Slider {...settings}>
                 {similarMovies.map((movie, i)=>(
-                    <Link className='similar' key={movie.id} to={`/movies/${movie.id}`}>
+                    <Link className='card' key={movie.id} to={`/movies/${movie.id}`}>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`}/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}/>
+                        movie.poster_path === null ? 
+                        <figure className='figurefx pushup'>
+                            <Image src={`https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available-300x300.jpg`} className='img'/>
+                            <figcaption>Popularity : {movie.popularity}⭐⭐⭐</figcaption>
+                        </figure>
+                         : 
+                        <figure className='figurefx pushup'>
+                            <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='img'/>
+                            <figcaption>  Popularity : {movie.popularity}⭐⭐⭐ </figcaption>
+                        </figure>
                     }
-                        <h3>{movie.original_title}</h3>
+                        <p>{movie.original_title}</p>
                     </Link>
                 ))}
             </Slider>

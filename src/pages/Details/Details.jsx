@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { Skeleton, Bone }  from 'react-loading-skeleton-placeholders'
 
 import Wrapper from '../../components/Wrapper'
 import { Image } from 'semantic-ui-react'
 import StyledDetails from './Details.styled'
+import Img  from '../../images/tt.jpg'
 
 import axios from 'axios'
 import SimilarMovie from '../../components/SimilarMovies/SimilarMovies'
@@ -35,29 +37,29 @@ const Details = (props) =>{
         <Wrapper>
             <br></br>
             <br></br>
-            <StyledDetails>
+            <StyledDetails style={{backgroundImage:`url(${Img})`}}>
                 <div className='img'>
                     {
-                        movie.backdrop_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`} className='image'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} className='image'/>
+                        movie.poster_path === null ? <Image src={`https://image.freepik.com/photos-gratuite/texture-pierre-noire-vue-dessus_88281-3900.jpg`} className='image'/> : <Image src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className='image'/>
                     }
                 </div>
                 <div className='content'>
-                    <h1>{movie.original_title} </h1>
+                    <h1>{movie.original_title || <Bone/>} </h1>
                     <p>{movie.overview} </p>
                     <p>
                         {Array.isArray(movie.genres) &&
                             movie.genres.map(mov => 
-                                <span key={mov.id} className="ml-2">{mov.name+' ,'}</span>
+                                <span key={mov.id}>{mov.name+' ,'}</span>
                             )
                         }
                     </p>
-                    <p>
+                    <p> 
                         {movie.release_date}
                     </p>
                     <p> <span> Available in    </span> 
                         {Array.isArray(movie.spoken_languages) &&
                             movie.spoken_languages.map((lang, i) => 
-                                <span key={i} className="ml-2">{lang.name+' ,'}</span>
+                                <span key={i}>{lang.name+' ,'}</span>
                             )
                         }
                     </p> 
@@ -69,7 +71,7 @@ const Details = (props) =>{
                             }
                     </p>
                     <p> 
-                         {movie.revenue}$ at the Box office
+                         {movie.revenue === 0 ? movie.revenue='no defined ': movie.revenue}$ at the Box office
                     
                     </p>
                 </div>
